@@ -1,16 +1,14 @@
 #include <iostream>
-int rasstoyanie(int x1, int y1, int x2, int y2) 
+#include <cmath>
+double l(int d) 
 {
-return **(1/2(x2 - x1)**2 + (y2 - y1)**2);
+return M_PI*d;
 }
-
 int main() 
 {
-    int x1;
-    int y1;
-    int x2;
-    int y2;
-    std::cin>>x1>>x2>>y1>>y2;
-    std::cout<<"расстояние между двумя точками с координатами "<<x1, y2<< " и "<<x2, y2<<" равно "<<rasstoyanie(x1, x2, y1, y2);
+    int d;
+    std::cout<<"введите диаметр окружности: ";
+    std::cin>>d;
+    std::cout<<"длина окружности с диаметром "<<d<<" равна "<<l(d)<<'\n';
 return 0;
 }
