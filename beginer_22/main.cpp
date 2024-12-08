@@ -13,6 +13,6 @@ int main()
     y = b;
     a = y;
     b = x;
-    std::cout<<"a: "<<a<<'\n'<<"b: "<<b<<'\n';
-return 0;
+    std::cout << "a: " << a << '\n' << "b: " << b << '\n';
+    return 0;
 }

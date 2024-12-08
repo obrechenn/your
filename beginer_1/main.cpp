@@ -1,11 +1,11 @@
 #include <iostream>
-int Square(int a){
-    return a * a;
+int Perimetr(int a){
+    return 4 * a;
 }
 int main()
 {
     int a;
     std::cin>>a;
-    std::cout<<"площадь квадрата со стороной "<< a <<" равно "<<Square(a) << '\n';
+    std::cout<<"перриметр квадрата со стороной "<< a <<" равно "<<Perimetr(a) << '\n';
     return 0;
 }
