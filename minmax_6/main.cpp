@@ -4,7 +4,7 @@ int main() {
     std::cout << "Введите количество чисел: ";
     std::cin >> N;
 
-    int numbers[N];
+    int numbers[100];
     std::cout << "Введите " << N << " чисел: ";
     for (int i = 0; i < N; ++i) {
         std::cin >> numbers[i];
@@ -19,7 +19,7 @@ int main() {
             min = numbers[i];
             index_min = i;
         }
-        if (numbers[i] > max) {
+        if (numbers[i] >= max) {
             max = numbers[i];
             index_max = i;
         }
