@@ -1,22 +1,25 @@
 #include <iostream>
-
 int main() {
     int N;
     std::cout << "Введите количество чисел: ";
     std::cin >> N;
 
-    int arr[N];
-    std::cout << "Введите " << N << " чисел: ";
+    double numbers[100];
+    double m,v;
+    double max = 0;
+    int index = 0;
     for (int i = 0; i < N; ++i) {
-        std::cin >> arr[i];
-    }
-    int min = 0;
-
-    for (int i = 1; i < N; ++i) {
-        if (arr[i] < arr[min]) {
-            min = i;
+        std::cin >> m >> v;
+        numbers[i] = m / v; 
+        if(numbers[i] > max){
+            max = numbers[i];
+            index = i;
         }
+    }  
+    for(int i = 0; i < N; i++){
+    std::cout<<numbers[i]<<"   ";
     }
-    std::cout << "Номер минимального элемента: " << min + 1;
-    return 0;
+    std::cout<<'\n' << index + 1 << '\n';
+
+return  0;
 }

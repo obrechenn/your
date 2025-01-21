@@ -1,24 +1,13 @@
 #include <iostream>
-int pow(int x, int c)
-{
-    int res = 1;
-    x % 2 == 0;
-    for(int i = 0;i < c;i++)
-    {
-        res = res * x;
-    }
-    return res;
-}
 int main() {
     int N;
-    std::cout << "Введите целое число N: ";
+    std::cout << "Введите целое число N(N<100): ";
     std::cin >> N;
     
-    int x;
-    int c;
-    int arr[N];
-    for (int i = 0; i < N; ++i) {
-        arr[i] = (2 * pow(x,N));
+    int arr[100];
+    arr[0] = 2;
+    for (int i = 1; i < N; ++i) {
+        arr[i] = arr[i-1] * 2;
     }
 
     std::cout << "Массив первых " << N << " положительных нечетных чисел: ";
