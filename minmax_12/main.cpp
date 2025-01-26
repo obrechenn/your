@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 
 int main() {
     int N;
@@ -10,14 +11,10 @@ int main() {
     for (int i = 0; i < N; ++i) {
         std::cin >> numbers[i];
     }
-    int min = numbers[0];
-    for (int i = 1; i < N; ++i) {
-        if(numbers[i] > 0) {
-            if (numbers[i] < min) {
+    int min = INT_MAX;
+    for (int i = 1; i < N; ++i) { 
+            if (numbers[i] < min && numbers[i] > 0) {
                 min = numbers[i];
-            }
-        }else{
-            i+=1;
         }
     }   
     if(min < 0) {
@@ -29,4 +26,4 @@ int main() {
     
     return 0;
 }
-//так и не придумал че сделать чтобы если первый элемент отрицателньыый все работало(( я бы мог  все через нейронку бахнуть,но не круто
+
